@@ -6,7 +6,7 @@ class CouncilQueue < ApplicationRecord
 		# get todays date so the queue will only have elements added in today
 		# meaning older entires aren't included
 		# Note: The time stamp given to the records added to the DB is 1 hour late.
-		# So records will for the next day will appear after 01:00 am
+		# So records for the next day will appear after 01:00 am
 		@time = Time.now.strftime("%Y-%m-%d")
 
 		puts(@time)
