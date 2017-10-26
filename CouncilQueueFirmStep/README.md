@@ -1,24 +1,18 @@
-# README
+# FirmStep Web Dev. task
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. To run clone the directory and go into the root directory of the project.
+2. run the command `rails server`.
+3. This *should* start the server and the website should be up and running on localhost:3000
 
-Things you may want to cover:
+## General Info
+Created using `Rails 5.0.6` and `ruby 2.2.6p396 (2016-11-15 revision 56800) [i386-mingw32]` on Windows 10.
+Uses a MySQL data hosted using a free hosting platform. So the database won't stay online for more than two weeks from today (26/10/17).
 
-* Ruby version
+## Why I chose Ruby on Rails (RoR)
 
-* System dependencies
+I saw that Firmstep prefers JS and PHP, but I am more familiar with RoR so could work quicker with it and already had it set up.
+I also chose RoR as it favours configuartion over customisation so a lot of 'good practices' are in build e.g. MVC. So I would'nt have to worry about my solutions following MVC pattern too much.
 
-* Configuration
+I also chose to use bootstrap to avoid having to focus too much on the CSS.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Given some more time, I would probably polish the code up a bit more and make it prettier. And test it much **much** more.
