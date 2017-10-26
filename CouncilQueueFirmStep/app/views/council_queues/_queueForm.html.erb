@@ -1,0 +1,27 @@
+<div class="col-sm-12" id="formToAdd">
+    <h2 class="tableCaption">New Customer</h2>
+    <form>
+        <label for="selectService">Select service</label>
+        <select class="form-control" id="select-service" name="service">
+            <option value="Housing">Housing</option>
+            <option value="Benefits">Benefits</option>
+            <option value="Council tax">Council Tax</option>
+            <option value="Fly tipping">Fly-tipping</option>
+            <option value="Missed bins">Missed garbage collection</option>
+        </select>
+        <label class="form-check-label">
+            <input class="form-check-input" id="org" type="radio" name="userType" value="Organization"> Organization
+        </label>
+        <label class="form-check-label">
+            <input class="form-check-input" id="ind" type="radio" name="userType" value="Citizen"> Citizen
+        </label>
+        <label class="form-check-label">
+            <input class="form-check-input" id="anon" type="radio" name="userType" value="Anonymous"> Anonymous
+        </label>
+        <br>
+        <br>
+        <%= render :partial => "individual"%>
+        <%= render :partial => "org"%>
+            <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+    </form>
+</div>

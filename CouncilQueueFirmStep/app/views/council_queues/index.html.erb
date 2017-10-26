@@ -1,0 +1,12 @@
+<p id="notice">
+    <%= notice %>
+</p>
+<div class="container">
+    <div class="col-sm-6" id="queueTable">
+        <%= render :partial => "queue"%>
+    </div>
+    <div class="col-sm-6" id="form">
+        <%= render :partial => "queueForm"%>
+    </div>
+    <button type="button" class="btn btn-secondary" id="addToQueue">Add to queue</button>
+</div>

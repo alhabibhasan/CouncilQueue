@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  name: MyString
+  service: MyString
+  queued_at: 2017-10-26 15:50:42
+
+two:
+  type: 
+  name: MyString
+  service: MyString
+  queued_at: 2017-10-26 15:50:42

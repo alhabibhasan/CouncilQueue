@@ -1,0 +1,36 @@
+
+#addToQueue {
+	margin: 10px;
+}
+
+#formToAdd {
+	padding: 10px;
+}
+
+#custTypes {
+	padding-bottom: 10px;
+}
+
+#form input{
+	padding-bottom: 10px;
+}
+
+#queueTable {
+	float: left;
+}
+
+#form {
+	float: right;
+}
+
+#indForm {
+	padding-bottom: 10px;
+}
+
+#orgForm {
+	padding-bottom: 10px;
+}
+
+.form-check-label {
+	padding-top: 5px;
+}
