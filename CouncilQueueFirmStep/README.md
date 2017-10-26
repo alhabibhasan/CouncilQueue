@@ -10,9 +10,9 @@ Uses a MySQL data hosted using a free hosting platform. So the database won't st
 
 ## Why I chose Ruby on Rails (RoR)
 
-I saw that Firmstep prefers JS and PHP, but I am more familiar with RoR so could work quicker with it and already had it set up.
-I also chose RoR as it favours configuartion over customisation so a lot of 'good practices' are in build e.g. MVC. So I would'nt have to worry about my solutions following MVC pattern too much.
+I saw that Firmstep prefers JS and PHP, but I am more familiar with RoR so could work quicker with it and already had it set up on my laptop.
+I also chose RoR as it favours configuartion over customisation so a lot of 'good practices' are in build e.g. MVC. Also, Rails has a lot of extra methods/libraries which make setting up a database and saving data much easier compared to other frameworks.
 
 I also chose to use bootstrap to avoid having to focus too much on the CSS.
 
-Given some more time, I would probably polish the code up a bit more and make it prettier. And test it much **much** more.
+Given some more time, I would probably polish the code up a bit more and make the website prettier. And test it much **much** more.
