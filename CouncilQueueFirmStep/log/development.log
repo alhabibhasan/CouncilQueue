@@ -6989,3 +6989,563 @@ Processing by CouncilQueuesController#index as HTML
 Completed 200 OK in 364ms (Views: 271.1ms | ActiveRecord: 55.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:02:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (24.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (21.6ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (18.8ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (19.4ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (2.0ms)
+  Rendered council_queues/_individual.html.erb (1.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (67.6ms)
+  Rendered council_queues/index.html.erb within layouts/application (144.5ms)
+Completed 200 OK in 1026ms (Views: 777.4ms | ActiveRecord: 170.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:03:13 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (17.7ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (23.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (18.5ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (72.0ms)
+  Rendered council_queues/index.html.erb within layouts/application (144.1ms)
+Completed 200 OK in 403ms (Views: 296.9ms | ActiveRecord: 59.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:04:04 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (29.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (17.7ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (18.0ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (0.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (65.1ms)
+  Rendered council_queues/index.html.erb within layouts/application (131.2ms)
+Completed 200 OK in 394ms (Views: 275.7ms | ActiveRecord: 65.0ms)
+
+
+Started GET "/?service=Housing&userType=Anonymous&title=Mr&firstname=&lastname=&org_name=" for 127.0.0.1 at 2017-10-27 00:04:18 +0100
+Processing by CouncilQueuesController#index as HTML
+  Parameters: {"service"=>"Housing", "userType"=>"Anonymous", "title"=>"Mr", "firstname"=>"", "lastname"=>"", "org_name"=>""}
+  [1m[36mCitizen Load (56.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (25.0ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (17.1ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[35m (18.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.1ms)[0m  [1m[32mINSERT INTO `anonymous_visitors` (`service`, `visitor_type`, `created_at`, `updated_at`) VALUES ('Housing', 'Anonymous', '2017-10-26 23:04:19', '2017-10-26 23:04:19')[0m
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 220ms (ActiveRecord: 202.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:04:19 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (25.9ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (28.0ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (18.1ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (1.0ms)
+  Rendered council_queues/_queueForm.html.erb (66.3ms)
+  Rendered council_queues/index.html.erb within layouts/application (133.1ms)
+Completed 200 OK in 413ms (Views: 297.4ms | ActiveRecord: 72.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:04:25 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (18.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (18.4ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (22.1ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (0.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (65.7ms)
+  Rendered council_queues/index.html.erb within layouts/application (135.8ms)
+Completed 200 OK in 394ms (Views: 293.2ms | ActiveRecord: 58.8ms)
+
+
+Started GET "/?service=Housing&userType=Organization&title=Mr&firstname=&lastname=&org_name=IBM" for 127.0.0.1 at 2017-10-27 00:04:32 +0100
+Processing by CouncilQueuesController#index as HTML
+  Parameters: {"service"=>"Housing", "userType"=>"Organization", "title"=>"Mr", "firstname"=>"", "lastname"=>"", "org_name"=>"IBM"}
+  [1m[36mCitizen Load (21.0ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (20.0ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (20.0ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[35m (17.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.3ms)[0m  [1m[32mINSERT INTO `organizations` (`visitor_type`, `name`, `service`, `created_at`, `updated_at`) VALUES ('Organization', 'IBM', 'Housing', '2017-10-26 23:04:32', '2017-10-26 23:04:32')[0m
+  [1m[35m (30.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 147ms (ActiveRecord: 133.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:04:32 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (25.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (18.4ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (17.5ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (1.0ms)
+  Rendered council_queues/_queueForm.html.erb (65.1ms)
+  Rendered council_queues/index.html.erb within layouts/application (135.8ms)
+Completed 200 OK in 406ms (Views: 305.3ms | ActiveRecord: 61.2ms)
+
+
+Started GET "/?service=Housing&userType=Citizen&title=Mr&firstname=John&lastname=Doe&org_name=" for 127.0.0.1 at 2017-10-27 00:07:09 +0100
+Processing by CouncilQueuesController#index as HTML
+  Parameters: {"service"=>"Housing", "userType"=>"Citizen", "title"=>"Mr", "firstname"=>"John", "lastname"=>"Doe", "org_name"=>""}
+  [1m[36mCitizen Load (19.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (19.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (18.0ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[35m (24.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.1ms)[0m  [1m[32mINSERT INTO `citizens` (`visitor_type`, `title`, `firstname`, `lastname`, `service`, `created_at`, `updated_at`) VALUES ('Citizen', 'Mr', 'John', 'Doe', 'Housing', '2017-10-26 23:07:09', '2017-10-26 23:07:09')[0m
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms (ActiveRecord: 143.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:07:09 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (19.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (18.8ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (21.2ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (0.0ms)
+  Rendered council_queues/_individual.html.erb (1.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (66.1ms)
+  Rendered council_queues/index.html.erb within layouts/application (133.2ms)
+Completed 200 OK in 396ms (Views: 298.1ms | ActiveRecord: 59.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:07:57 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (18.3ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017-10-26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (19.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017-10-26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (22.2ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017-10-26%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (2.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (65.1ms)
+  Rendered council_queues/index.html.erb within layouts/application (135.2ms)
+Completed 200 OK in 565ms (Views: 291.5ms | ActiveRecord: 194.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:08:23 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (19.5ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017-10-27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (19.3ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017-10-27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (20.2ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017-10-27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (69.8ms)
+  Rendered council_queues/index.html.erb within layouts/application (135.8ms)
+Completed 200 OK in 402ms (Views: 284.4ms | ActiveRecord: 58.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:08:32 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (118.6ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017-10-28%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (20.0ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017-10-28%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (25.4ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017-10-28%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (1.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (65.2ms)
+  Rendered council_queues/index.html.erb within layouts/application (137.8ms)
+Completed 200 OK in 582ms (Views: 282.7ms | ActiveRecord: 164.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:08:38 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (24.1ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017-10-26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (21.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017-10-26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (37.5ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017-10-26%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (2.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (67.1ms)
+  Rendered council_queues/index.html.erb within layouts/application (140.2ms)
+Completed 200 OK in 447ms (Views: 289.9ms | ActiveRecord: 82.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:11:53 +0100
+Processing by CouncilQueuesController#index as HTML
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `t' for CouncilQueue(Table doesn't exist):Class):
+  
+app/models/council_queue.rb:9:in `getQueue'
+app/controllers/council_queues_controller.rb:8:in `index'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1870.6ms)
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:12:11 +0100
+Processing by CouncilQueuesController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `time' for CouncilQueue(Table doesn't exist):Class):
+  
+app/models/council_queue.rb:10:in `getQueue'
+app/controllers/council_queues_controller.rb:8:in `index'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1898.1ms)
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:12:28 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (21.7ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (21.1ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (19.0ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (0.0ms)
+  Rendered council_queues/_individual.html.erb (0.5ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (73.7ms)
+  Rendered council_queues/index.html.erb within layouts/application (144.3ms)
+Completed 200 OK in 433ms (Views: 307.7ms | ActiveRecord: 61.9ms)
+
+
+Started GET "/?service=Housing&userType=Anonymous&title=Mr&firstname=&lastname=&org_name=" for 127.0.0.1 at 2017-10-27 00:12:33 +0100
+Processing by CouncilQueuesController#index as HTML
+  Parameters: {"service"=>"Housing", "userType"=>"Anonymous", "title"=>"Mr", "firstname"=>"", "lastname"=>"", "org_name"=>""}
+  [1m[36mCitizen Load (18.4ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (17.6ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (21.0ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[35m (20.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (17.9ms)[0m  [1m[32mINSERT INTO `anonymous_visitors` (`service`, `visitor_type`, `created_at`, `updated_at`) VALUES ('Housing', 'Anonymous', '2017-10-26 23:12:33', '2017-10-26 23:12:33')[0m
+  [1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 153.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:12:34 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (19.2ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (19.0ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (18.0ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.5ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (65.1ms)
+  Rendered council_queues/index.html.erb within layouts/application (132.9ms)
+Completed 200 OK in 386ms (Views: 286.6ms | ActiveRecord: 56.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:12:36 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (19.6ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (22.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (17.9ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (0.5ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.5ms)
+  Rendered council_queues/_queueForm.html.erb (66.4ms)
+  Rendered council_queues/index.html.erb within layouts/application (136.5ms)
+Completed 200 OK in 378ms (Views: 276.9ms | ActiveRecord: 59.7ms)
+
+
+Started GET "/?service=Fly+tipping&userType=Citizen&title=Mr&firstname=Sheldon&lastname=Cooper&org_name=" for 127.0.0.1 at 2017-10-27 00:13:33 +0100
+Processing by CouncilQueuesController#index as HTML
+  Parameters: {"service"=>"Fly tipping", "userType"=>"Citizen", "title"=>"Mr", "firstname"=>"Sheldon", "lastname"=>"Cooper", "org_name"=>""}
+  [1m[36mCitizen Load (18.1ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (19.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (19.1ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[35m (19.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.1ms)[0m  [1m[32mINSERT INTO `citizens` (`visitor_type`, `title`, `firstname`, `lastname`, `service`, `created_at`, `updated_at`) VALUES ('Citizen', 'Mr', 'Sheldon', 'Cooper', 'Fly tipping', '2017-10-26 23:13:34', '2017-10-26 23:13:34')[0m
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 119.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:13:34 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (22.5ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (17.2ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (17.5ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/26%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.5ms)
+  Rendered council_queues/_queueForm.html.erb (65.4ms)
+  Rendered council_queues/index.html.erb within layouts/application (131.6ms)
+Completed 200 OK in 373ms (Views: 277.3ms | ActiveRecord: 57.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:14:30 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (19.6ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (22.6ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (19.1ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017/10/27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (1.0ms)
+  Rendered council_queues/_org.html.erb (0.0ms)
+  Rendered council_queues/_queueForm.html.erb (66.5ms)
+  Rendered council_queues/index.html.erb within layouts/application (136.4ms)
+Completed 200 OK in 478ms (Views: 290.5ms | ActiveRecord: 122.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-27 00:14:51 +0100
+Processing by CouncilQueuesController#index as HTML
+  [1m[36mCitizen Load (18.7ms)[0m  [1m[34mSELECT visitor_type,title, firstname, lastname, CONCAT(title , ' ' , firstname , ' ' , lastname) 
+		AS Name, service, created_at 
+		FROM citizens 
+		WHERE (created_at LIKE '%2017-10-27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mAnonymousVisitor Load (18.7ms)[0m  [1m[34mSELECT visitor_type, visitor_type AS Name, service, created_at 
+		FROM anonymous_visitors 
+		WHERE (created_at LIKE '%2017-10-27%')
+		ORDER BY created_at ASC;[0m
+  [1m[36mOrganization Load (20.4ms)[0m  [1m[34mSELECT visitor_type, name AS Name, service, created_at 
+		FROM organizations 
+		WHERE (created_at LIKE '%2017-10-27%')
+		ORDER BY created_at ASC;[0m
+  Rendering council_queues/index.html.erb within layouts/application
+  Rendered council_queues/_queue.html.erb (1.0ms)
+  Rendered council_queues/_individual.html.erb (0.0ms)
+  Rendered council_queues/_org.html.erb (0.5ms)
+  Rendered council_queues/_queueForm.html.erb (94.6ms)
+  Rendered council_queues/index.html.erb within layouts/application (174.1ms)
+Completed 200 OK in 468ms (Views: 347.3ms | ActiveRecord: 57.8ms)
+
+

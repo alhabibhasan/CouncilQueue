@@ -4,9 +4,12 @@ class CouncilQueuesController < ApplicationController
   # GET /council_queues
   # GET /council_queues.json
   def index
+    # get the queue data from the database
     @council_queues = CouncilQueue.getQueue
 
     @type = params[:userType]
+
+    # check which type of user and then create a user depending on this
 
     if (@type == "Citizen")
       createCitizen(params[:title], params[:firstname], params[:lastname], params[:service], params[:userType])
