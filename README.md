@@ -4,6 +4,8 @@
 2. run the command `rails server`.
 3. This *should* start the server and the website should be up and running on localhost:3000
 
+NB: The database server time is in UTC which is BST -1 Hour, so the time column is 1 hour off.
+
 ## General Info
 Created using `Rails 5.0.6` and `ruby 2.2.6p396 (2016-11-15 revision 56800) [i386-mingw32]` on Windows 10.
 Uses a MySQL data hosted using a free hosting platform. So the database won't stay online for more than two weeks from today (26/10/17).
